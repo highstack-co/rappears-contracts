@@ -73,7 +73,7 @@ contract RapPearsNft is ERC721, Owner {
 
     uint256 public devBalance;
 
-    uint256 internal currentId = 1;
+    uint256 internal currentId;
 
 ///=============================================================================================
 /// External Logic
@@ -114,13 +114,16 @@ contract RapPearsNft is ERC721, Owner {
         require(msg.sender == ownerOf(id), "Not Owner");
         
         locked[id] = block.timestamp;
+        deposits[id].weight = 100; // 100 = 1 weight
+        deposits[id].tracker += 100 * yeildPerDeposit;
+        totalWeight += 100;
 
     }
 
      event A (uint256);
 
     function withdrawFromId(uint256 id, uint256 amount) public {
-        require(block.timestamp - locked[id] >= lockTimeSeconds && locked[id] != 0);
+        require(block.timestamp - locked[id] >= lockTimeSeconds && locked[id] != 0, "here");
 
         locked[id] = 0;
 
@@ -128,11 +131,16 @@ contract RapPearsNft is ERC721, Owner {
     }
 
     function bundleWithdraw() external {
+
         uint256 length = tokensByAddress[msg.sender].length;
         for (uint256 i; i < length;) {
-            withdrawFromId(
-                tokensByAddress[msg.sender][i], withdrawableById(tokensByAddress[msg.sender][i])
-            );
+
+            uint256 id = tokensByAddress[msg.sender][i];
+            if (block.timestamp - locked[id] >= lockTimeSeconds && locked[id] != 0) {
+                withdrawFromId(
+                id, withdrawableById(id)
+                );
+            }
             unchecked { ++i; }
         }
     }
@@ -156,19 +164,10 @@ contract RapPearsNft is ERC721, Owner {
 
     function _mintNewNFT() internal returns (uint256) {
         
-        uint256 id = currentId;
-
-        _mint(msg.sender, id);
-
-        ++currentId;
-
+        uint256 id = ++currentId;
         require(currentId <= supplyCap);
 
-        deposits[id].weight = 100; // 100 = 1 weight
-        deposits[id].tracker += 100 * yeildPerDeposit;
-
-        totalWeight += 100;
-
+        _mint(msg.sender, id);
         _addId(msg.sender, id);
 
         return id;
@@ -181,7 +180,9 @@ contract RapPearsNft is ERC721, Owner {
             amount <= withdrawableById(id)
         ); 
 
-        deposits[id].tracker += deposits[id].weight * yeildPerDeposit;
+        deposits[id].weight = 0; // user ceases to earn yield
+        deposits[id].tracker = 0;
+        totalWeight -= 100;
 
         weth.transfer(msg.sender, amount); 
     }
@@ -194,7 +195,11 @@ contract RapPearsNft is ERC721, Owner {
         uint256 toDev = msg.value * devFeeBP / 10000;
         devBalance += toDev;
 
-        if (totalWeight > 0) { distributeYeild(msg.value - toDev); } else { toDev += msg.value; }
+        if (totalWeight > 0) { 
+            distributeYeild(msg.value - toDev); 
+        } else { 
+            devBalance += (msg.value - toDev); 
+        }
     }
 
     // add to list of ID by address

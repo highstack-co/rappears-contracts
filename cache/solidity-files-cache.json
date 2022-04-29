@@ -46,48 +46,6 @@
         }
       }
     },
-    "/Users/nuhhtyy/Desktop/Projects/rap/src/Deploy.sol": {
-      "lastModificationDate": 1651118483104,
-      "contentHash": "1042e9b4ac5a8b0a612c1cf4906d30ff",
-      "sourceName": "src/Deploy.sol",
-      "solcConfig": {
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "metadata": {
-            "bytecodeHash": "none"
-          },
-          "outputSelection": {
-            "*": {
-              "": [
-                "ast"
-              ],
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers"
-              ]
-            }
-          },
-          "evmVersion": "london"
-        }
-      },
-      "imports": [
-        "src/NFTVault.sol",
-        "src/tokens/ERC20.sol",
-        "src/tokens/ERC721.sol",
-        "src/utils/owner.sol"
-      ],
-      "versionRequirement": ">=0.8.0",
-      "artifacts": {
-        "Deploy": {
-          "0.8.10+commit.fc410830.Darwin.appleclang": "Deploy.sol/Deploy.json"
-        }
-      }
-    },
     "/Users/nuhhtyy/Desktop/Projects/rap/src/MultiSigTeam.sol": {
       "lastModificationDate": 1651117272243,
       "contentHash": "2234dfa575aca2acd110f83126d2ea6e",
@@ -126,8 +84,8 @@
       }
     },
     "/Users/nuhhtyy/Desktop/Projects/rap/src/NFTVault.sol": {
-      "lastModificationDate": 1651118884479,
-      "contentHash": "373a0c2f72723ba385da445175a231ac",
+      "lastModificationDate": 1651260625071,
+      "contentHash": "a8f67f9cb2181e781b996b4fa618082c",
       "sourceName": "src/NFTVault.sol",
       "solcConfig": {
         "settings": {
@@ -163,6 +121,55 @@
       "artifacts": {
         "RapPearsNft": {
           "0.8.10+commit.fc410830.Darwin.appleclang": "NFTVault.sol/RapPearsNft.json"
+        }
+      }
+    },
+    "/Users/nuhhtyy/Desktop/Projects/rap/src/NFTVaultFlat.sol": {
+      "lastModificationDate": 1651126998225,
+      "contentHash": "93a2693d96ff75315a566e70c1e329a8",
+      "sourceName": "src/NFTVaultFlat.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "none"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ]
+            }
+          },
+          "evmVersion": "london"
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.8.0",
+      "artifacts": {
+        "ERC20": {
+          "0.8.10+commit.fc410830.Darwin.appleclang": "NFTVaultFlat.sol/ERC20.json"
+        },
+        "ERC721": {
+          "0.8.10+commit.fc410830.Darwin.appleclang": "NFTVaultFlat.sol/ERC721.json"
+        },
+        "ERC721TokenReceiver": {
+          "0.8.10+commit.fc410830.Darwin.appleclang": "NFTVaultFlat.sol/ERC721TokenReceiver.json"
+        },
+        "Owner": {
+          "0.8.10+commit.fc410830.Darwin.appleclang": "NFTVaultFlat.sol/Owner.json"
+        },
+        "RapPearsNft": {
+          "0.8.10+commit.fc410830.Darwin.appleclang": "NFTVaultFlat.sol/RapPearsNft.json"
         }
       }
     },
@@ -246,8 +253,8 @@
       }
     },
     "/Users/nuhhtyy/Desktop/Projects/rap/src/test/Contract.t.sol": {
-      "lastModificationDate": 1651117272241,
-      "contentHash": "089fb3ce8706aa97074f14b981b7901a",
+      "lastModificationDate": 1651260836461,
+      "contentHash": "a063b8d4c2b52d9614173f145e803801",
       "sourceName": "src/test/Contract.t.sol",
       "solcConfig": {
         "settings": {

@@ -38,9 +38,12 @@ contract ContractTest is DSTest {
 
         nft.mintNewNft{value: 1e17}(1);
 
+        nft.lockUp(1);
+
         nft.mintNewNft{value: 1e17}(1);
 
-       assertEq( 9e16, nft.withdrawableById(1));
+        assertEq( 1e17 - 1e17 * 1000 / 10000 , nft.withdrawableById(1));
+        assertEq(1e17 + 1e17 * 1000 / 10000, nft.devBalance());
     }
 
     function testLockUpAndWithdrawl() public {
@@ -50,17 +53,17 @@ contract ContractTest is DSTest {
 
         nft.mintNewNft{value: 1e17}(1);
 
+        nft.lockUp(1);
+
         nft.mintNewNft{value: 1e17}(1);
 
         // should fail before we lock up
-        cheats.expectRevert(bytes(""));
+        cheats.expectRevert(bytes("here"));
 
-        nft.withdrawFromId(1, 8e16);
-
-        nft.lockUp(1);
+        nft.withdrawFromId(2, 8e16);
         
         //should fail if not enough time has elapsed
-        cheats.expectRevert(bytes(""));
+        cheats.expectRevert(bytes("here"));
 
         nft.withdrawFromId(1, 8e16);
 
@@ -79,26 +82,26 @@ contract ContractTest is DSTest {
 
         nft.mintNewNft{value: 1e17}(1);
 
-        nft.mintNewNft{value: 1e17}(1);
+        nft.lockUp(1);
 
         nft.mintNewNft{value: 1e17}(1);
+
+        nft.lockUp(2);
+
+        nft.mintNewNft{value: 1e17}(1);
+
+        nft.lockUp(3);
 
         assertEq(
             nft.tokensByAddress(address(this), 2),
             3
         );
 
-        nft.lockUp(1);
-
-        nft.lockUp(2);
-
-        nft.lockUp(3);
-
         cheats.warp(40 days);
 
-        nft.bundleWithdraw(); // will fail if reverts
+        nft.bundleWithdraw();
 
-        assertEq(weth.balanceOf(address(this)), 180000000000000000);
+        assertEq(weth.balanceOf(address(this)), 9e16 + 9e16);
 
     }
     
@@ -111,6 +114,6 @@ contract ContractTest is DSTest {
 
         nft.mintNewNft{value: 1e17}(1);
 
-        assertEq(nft.devBalance(), ((1e17 * 3) * 1000) / 10000);
+        assertEq(nft.devBalance(), 3e17);
     }
 }

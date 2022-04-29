@@ -2,8 +2,9 @@
 pragma solidity >=0.8.0;
 
 import "./NFTVault.sol";
+import "./utils/owner.sol";
 
-contract NFTPay {
+contract NFTPay is Owner {
 
     RapPearsNft nft;
 
@@ -11,15 +12,13 @@ contract NFTPay {
         nft = RapPearsNft(_nft);
     }
 
-    function payForNft(address who, uint256 amount) public payable {
+    function payForNft(uint256 amount) public payable {
         
-        uint256[] memory ret = nft.mintNewNft{value: msg.value}(amount);
-        uint256 length = ret.length;
+        nft.mintNewNft{value: msg.value}(amount);
 
-        for (uint256 i; i < length;) {
-            nft.transferFrom(address(this), who, ret[i]);
-            unchecked { ++i; }
-        }
+    }
 
+    function transferOut(address who, uint256 id) public onlyOwner {
+        nft.transferFrom(address(this), who, id);
     }
 }
