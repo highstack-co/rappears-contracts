@@ -19,6 +19,8 @@ contract ContractTest is DSTest {
             address(weth),
             1000, //dev fee
             30 days, //lockup period
+            10,
+            5,
             "test",
             "test"
         );

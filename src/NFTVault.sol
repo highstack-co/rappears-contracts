@@ -83,12 +83,20 @@ contract RapPearsNft is ERC721, Owner {
         address _weth, 
         uint256 _devFeeBP,
         uint256 _lockTime,
+        uint256 _initalSupplyCap,
+        uint256 _initialMintAmount,
         string memory _name, 
         string memory _symbol
     ) ERC721(_name, _symbol) {
         weth = ERC20(_weth);
         devFeeBP = _devFeeBP;
         lockTimeSeconds = _lockTime;
+        supplyCap = _initalSupplyCap;
+
+        for (uint256 i; i < _initialMintAmount;) {
+            _mintNewNFT();
+            unchecked { ++i; }
+        }
     }
 
     function mintNewNft(uint256 amount) external payable returns (uint256[] memory) {
