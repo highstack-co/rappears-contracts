@@ -1,527 +1,729 @@
 {
-  "_format": "ethers-rs-sol-cache-3",
-  "paths": {
-    "artifacts": "out",
-    "sources": "src",
-    "tests": "test",
-    "libraries": [
-      "lib"
-    ]
-  },
+  "_format": "hh-sol-cache-2",
   "files": {
-    "/Users/nuhhtyy/Desktop/Projects/rap/lib/ds-test/src/test.sol": {
-      "lastModificationDate": 1651117272227,
-      "contentHash": "82a8604fe648c30a9bd56444368704f0",
-      "sourceName": "lib/ds-test/src/test.sol",
+    "/Users/tobiasgu/dev/Crypto/rappearsDAO/newNft/node_modules/@openzeppelin/contracts/access/Ownable.sol": {
+      "lastModificationDate": 1651439680729,
+      "contentHash": "8398972af73b4e9e5ff3b31cad86234f",
+      "sourceName": "@openzeppelin/contracts/access/Ownable.sol",
       "solcConfig": {
+        "version": "0.8.4",
         "settings": {
           "optimizer": {
             "enabled": true,
             "runs": 200
           },
-          "metadata": {
-            "bytecodeHash": "none"
-          },
           "outputSelection": {
             "*": {
-              "": [
-                "ast"
-              ],
               "*": [
                 "abi",
                 "evm.bytecode",
                 "evm.deployedBytecode",
-                "evm.methodIdentifiers"
-              ]
-            }
-          },
-          "evmVersion": "london"
-        }
-      },
-      "imports": [],
-      "versionRequirement": ">=0.5.0",
-      "artifacts": {
-        "DSTest": {
-          "0.8.10+commit.fc410830.Darwin.appleclang": "test.sol/DSTest.json"
-        }
-      }
-    },
-    "/Users/nuhhtyy/Desktop/Projects/rap/src/MultiSigTeam.sol": {
-      "lastModificationDate": 1651117272243,
-      "contentHash": "2234dfa575aca2acd110f83126d2ea6e",
-      "sourceName": "src/MultiSigTeam.sol",
-      "solcConfig": {
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "metadata": {
-            "bytecodeHash": "none"
-          },
-          "outputSelection": {
-            "*": {
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
               "": [
                 "ast"
-              ],
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers"
               ]
             }
-          },
-          "evmVersion": "london"
-        }
-      },
-      "imports": [],
-      "versionRequirement": ">=0.8.0",
-      "artifacts": {
-        "MultiSigWallet": {
-          "0.8.10+commit.fc410830.Darwin.appleclang": "MultiSigTeam.sol/MultiSigWallet.json"
-        }
-      }
-    },
-    "/Users/nuhhtyy/Desktop/Projects/rap/src/NFTVault.sol": {
-      "lastModificationDate": 1651261189495,
-      "contentHash": "57d316d44289615de2f532d3288c3fe2",
-      "sourceName": "src/NFTVault.sol",
-      "solcConfig": {
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "metadata": {
-            "bytecodeHash": "none"
-          },
-          "outputSelection": {
-            "*": {
-              "": [
-                "ast"
-              ],
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers"
-              ]
-            }
-          },
-          "evmVersion": "london"
+          }
         }
       },
       "imports": [
-        "src/tokens/ERC20.sol",
-        "src/tokens/ERC721.sol",
-        "src/utils/owner.sol"
+        "../utils/Context.sol"
       ],
-      "versionRequirement": ">=0.8.0",
-      "artifacts": {
-        "RapPearsNft": {
-          "0.8.10+commit.fc410830.Darwin.appleclang": "NFTVault.sol/RapPearsNft.json"
-        }
-      }
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Ownable"
+      ]
     },
-    "/Users/nuhhtyy/Desktop/Projects/rap/src/NFTVaultFlat.sol": {
-      "lastModificationDate": 1651126998225,
-      "contentHash": "93a2693d96ff75315a566e70c1e329a8",
-      "sourceName": "src/NFTVaultFlat.sol",
+    "/Users/tobiasgu/dev/Crypto/rappearsDAO/newNft/node_modules/hardhat/console.sol": {
+      "lastModificationDate": 1651439680579,
+      "contentHash": "cc4777addd464ea56fa35b1c45df0591",
+      "sourceName": "hardhat/console.sol",
       "solcConfig": {
+        "version": "0.8.4",
         "settings": {
           "optimizer": {
             "enabled": true,
             "runs": 200
           },
-          "metadata": {
-            "bytecodeHash": "none"
-          },
           "outputSelection": {
             "*": {
-              "": [
-                "ast"
-              ],
               "*": [
                 "abi",
                 "evm.bytecode",
                 "evm.deployedBytecode",
-                "evm.methodIdentifiers"
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
               ]
             }
-          },
-          "evmVersion": "london"
+          }
         }
       },
       "imports": [],
-      "versionRequirement": ">=0.8.0",
-      "artifacts": {
-        "ERC20": {
-          "0.8.10+commit.fc410830.Darwin.appleclang": "NFTVaultFlat.sol/ERC20.json"
-        },
-        "ERC721": {
-          "0.8.10+commit.fc410830.Darwin.appleclang": "NFTVaultFlat.sol/ERC721.json"
-        },
-        "ERC721TokenReceiver": {
-          "0.8.10+commit.fc410830.Darwin.appleclang": "NFTVaultFlat.sol/ERC721TokenReceiver.json"
-        },
-        "Owner": {
-          "0.8.10+commit.fc410830.Darwin.appleclang": "NFTVaultFlat.sol/Owner.json"
-        },
-        "RapPearsNft": {
-          "0.8.10+commit.fc410830.Darwin.appleclang": "NFTVaultFlat.sol/RapPearsNft.json"
-        }
-      }
+      "versionPragmas": [
+        ">=0.4.22 <0.9.0"
+      ],
+      "artifacts": [
+        "console"
+      ]
     },
-    "/Users/nuhhtyy/Desktop/Projects/rap/src/NFTpay.sol": {
-      "lastModificationDate": 1651260926663,
-      "contentHash": "56e64dfd1af195c7006d36c92bd1a393",
-      "sourceName": "src/NFTpay.sol",
+    "/Users/tobiasgu/dev/Crypto/rappearsDAO/newNft/node_modules/@openzeppelin/contracts/utils/Context.sol": {
+      "lastModificationDate": 1651439680737,
+      "contentHash": "5f2c5c4b6af2dd4551027144797bc8be",
+      "sourceName": "@openzeppelin/contracts/utils/Context.sol",
       "solcConfig": {
+        "version": "0.8.4",
         "settings": {
           "optimizer": {
             "enabled": true,
             "runs": 200
           },
-          "metadata": {
-            "bytecodeHash": "none"
-          },
           "outputSelection": {
             "*": {
-              "": [
-                "ast"
-              ],
               "*": [
                 "abi",
                 "evm.bytecode",
                 "evm.deployedBytecode",
-                "evm.methodIdentifiers"
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
               ]
             }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Context"
+      ]
+    },
+    "/Users/tobiasgu/dev/Crypto/rappearsDAO/newNft/node_modules/@openzeppelin/contracts/utils/Strings.sol": {
+      "lastModificationDate": 1651439680738,
+      "contentHash": "9c54c6c065d9e590fdcdd72c451425b9",
+      "sourceName": "@openzeppelin/contracts/utils/Strings.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
           },
-          "evmVersion": "london"
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Strings"
+      ]
+    },
+    "/Users/tobiasgu/dev/Crypto/rappearsDAO/newNft/contracts/RappearsNFT.sol": {
+      "lastModificationDate": 1651458413518,
+      "contentHash": "becb13a0f2a408c4906f17abf0e8e925",
+      "sourceName": "contracts/RappearsNFT.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
         }
       },
       "imports": [
-        "src/NFTVault.sol",
-        "src/tokens/ERC20.sol",
-        "src/tokens/ERC721.sol",
-        "src/utils/owner.sol"
+        "erc721a-upgradeable/contracts/extensions/ERC721AQueryableUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/utils/StringsUpgradeable.sol"
       ],
-      "versionRequirement": ">=0.8.0",
-      "artifacts": {
-        "NFTPay": {
-          "0.8.10+commit.fc410830.Darwin.appleclang": "NFTpay.sol/NFTPay.json"
-        }
-      }
+      "versionPragmas": [
+        "^0.8.4"
+      ],
+      "artifacts": [
+        "RappearsNFTs"
+      ]
     },
-    "/Users/nuhhtyy/Desktop/Projects/rap/src/libs/IterableMapping.sol": {
-      "lastModificationDate": 1651117272242,
-      "contentHash": "bbed41da92fef43b52cdcbc49eafbb77",
-      "sourceName": "src/libs/IterableMapping.sol",
+    "/Users/tobiasgu/dev/Crypto/rappearsDAO/newNft/node_modules/erc721a-upgradeable/contracts/extensions/ERC721AQueryableUpgradeable.sol": {
+      "lastModificationDate": 1651439787810,
+      "contentHash": "e7df8e4010d784965ef259579e4d986a",
+      "sourceName": "erc721a-upgradeable/contracts/extensions/ERC721AQueryableUpgradeable.sol",
       "solcConfig": {
+        "version": "0.8.4",
         "settings": {
           "optimizer": {
             "enabled": true,
             "runs": 200
           },
-          "metadata": {
-            "bytecodeHash": "none"
-          },
           "outputSelection": {
             "*": {
-              "": [
-                "ast"
-              ],
               "*": [
                 "abi",
                 "evm.bytecode",
                 "evm.deployedBytecode",
-                "evm.methodIdentifiers"
-              ]
-            }
-          },
-          "evmVersion": "london"
-        }
-      },
-      "imports": [],
-      "versionRequirement": ">=0.8.0",
-      "artifacts": {
-        "IterableMapping": {
-          "0.8.10+commit.fc410830.Darwin.appleclang": "IterableMapping.sol/IterableMapping.json"
-        }
-      }
-    },
-    "/Users/nuhhtyy/Desktop/Projects/rap/src/test/Contract.t.sol": {
-      "lastModificationDate": 1651261210864,
-      "contentHash": "86f4cac2abeff891c80ffd7882328e43",
-      "sourceName": "src/test/Contract.t.sol",
-      "solcConfig": {
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "metadata": {
-            "bytecodeHash": "none"
-          },
-          "outputSelection": {
-            "*": {
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
               "": [
                 "ast"
-              ],
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers"
               ]
             }
-          },
-          "evmVersion": "london"
+          }
         }
       },
       "imports": [
-        "lib/ds-test/src/test.sol",
-        "src/NFTVault.sol",
-        "src/test/utils/cheats.sol",
-        "src/test/utils/console.sol",
-        "src/test/weth.sol",
-        "src/tokens/ERC20.sol",
-        "src/tokens/ERC721.sol",
-        "src/utils/owner.sol"
+        "../ERC721AUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol"
       ],
-      "versionRequirement": ">=0.8.0",
-      "artifacts": {
-        "ContractTest": {
-          "0.8.10+commit.fc410830.Darwin.appleclang": "Contract.t.sol/ContractTest.json"
-        }
-      }
+      "versionPragmas": [
+        "^0.8.4"
+      ],
+      "artifacts": [
+        "ERC721AQueryableUpgradeable"
+      ]
     },
-    "/Users/nuhhtyy/Desktop/Projects/rap/src/test/utils/cheats.sol": {
-      "lastModificationDate": 1651117272241,
-      "contentHash": "3b70bbe14255c9b3cfa3d41b8a46e032",
-      "sourceName": "src/test/utils/cheats.sol",
+    "/Users/tobiasgu/dev/Crypto/rappearsDAO/newNft/node_modules/@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol": {
+      "lastModificationDate": 1651441146399,
+      "contentHash": "c9cde6037fc8b1fe0ef04b79149ba733",
+      "sourceName": "@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol",
       "solcConfig": {
+        "version": "0.8.4",
         "settings": {
           "optimizer": {
             "enabled": true,
             "runs": 200
           },
-          "metadata": {
-            "bytecodeHash": "none"
-          },
           "outputSelection": {
             "*": {
-              "": [
-                "ast"
-              ],
               "*": [
                 "abi",
                 "evm.bytecode",
                 "evm.deployedBytecode",
-                "evm.methodIdentifiers"
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
               ]
             }
-          },
-          "evmVersion": "london"
+          }
         }
       },
-      "imports": [],
-      "versionRequirement": ">=0.8.0",
-      "artifacts": {
-        "CheatCodes": {
-          "0.8.10+commit.fc410830.Darwin.appleclang": "cheats.sol/CheatCodes.json"
-        }
-      }
+      "imports": [
+        "../proxy/utils/Initializable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ReentrancyGuardUpgradeable"
+      ]
     },
-    "/Users/nuhhtyy/Desktop/Projects/rap/src/test/utils/console.sol": {
-      "lastModificationDate": 1651117272240,
-      "contentHash": "16b5c26a2c8519879099d06af90fcde7",
-      "sourceName": "src/test/utils/console.sol",
+    "/Users/tobiasgu/dev/Crypto/rappearsDAO/newNft/node_modules/@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol": {
+      "lastModificationDate": 1651441146397,
+      "contentHash": "11b77de3cb69dfc6b342ec87bd09cbdd",
+      "sourceName": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
       "solcConfig": {
+        "version": "0.8.4",
         "settings": {
           "optimizer": {
             "enabled": true,
             "runs": 200
           },
-          "metadata": {
-            "bytecodeHash": "none"
-          },
           "outputSelection": {
             "*": {
-              "": [
-                "ast"
-              ],
               "*": [
                 "abi",
                 "evm.bytecode",
                 "evm.deployedBytecode",
-                "evm.methodIdentifiers"
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
               ]
             }
-          },
-          "evmVersion": "london"
+          }
         }
       },
-      "imports": [],
-      "versionRequirement": ">=0.8.0",
-      "artifacts": {
-        "console": {
-          "0.8.10+commit.fc410830.Darwin.appleclang": "console.sol/console.json"
-        }
-      }
+      "imports": [
+        "../utils/ContextUpgradeable.sol",
+        "../proxy/utils/Initializable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "OwnableUpgradeable"
+      ]
     },
-    "/Users/nuhhtyy/Desktop/Projects/rap/src/test/weth.sol": {
-      "lastModificationDate": 1651117272241,
-      "contentHash": "0bfd8e3cb4e57f3aa389e09288b19dd5",
-      "sourceName": "src/test/weth.sol",
+    "/Users/tobiasgu/dev/Crypto/rappearsDAO/newNft/node_modules/@openzeppelin/contracts-upgradeable/utils/StringsUpgradeable.sol": {
+      "lastModificationDate": 1651441146400,
+      "contentHash": "f60b5fcbc57911b0fbc7a31a110f90bc",
+      "sourceName": "@openzeppelin/contracts-upgradeable/utils/StringsUpgradeable.sol",
       "solcConfig": {
+        "version": "0.8.4",
         "settings": {
           "optimizer": {
             "enabled": true,
             "runs": 200
           },
-          "metadata": {
-            "bytecodeHash": "none"
-          },
           "outputSelection": {
             "*": {
-              "": [
-                "ast"
-              ],
               "*": [
                 "abi",
                 "evm.bytecode",
                 "evm.deployedBytecode",
-                "evm.methodIdentifiers"
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
               ]
             }
-          },
-          "evmVersion": "london"
+          }
         }
       },
       "imports": [],
-      "versionRequirement": ">=0.8.0",
-      "artifacts": {
-        "WETH9": {
-          "0.8.10+commit.fc410830.Darwin.appleclang": "weth.sol/WETH9.json"
-        }
-      }
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "StringsUpgradeable"
+      ]
     },
-    "/Users/nuhhtyy/Desktop/Projects/rap/src/tokens/ERC20.sol": {
-      "lastModificationDate": 1651117272243,
-      "contentHash": "e4fd5a2574a8387580f7bc98d3355f71",
-      "sourceName": "src/tokens/ERC20.sol",
+    "/Users/tobiasgu/dev/Crypto/rappearsDAO/newNft/node_modules/erc721a-upgradeable/contracts/ERC721AUpgradeable.sol": {
+      "lastModificationDate": 1651439787813,
+      "contentHash": "999b48340ad921e5a99f5d8743a2b6a1",
+      "sourceName": "erc721a-upgradeable/contracts/ERC721AUpgradeable.sol",
       "solcConfig": {
+        "version": "0.8.4",
         "settings": {
           "optimizer": {
             "enabled": true,
             "runs": 200
           },
-          "metadata": {
-            "bytecodeHash": "none"
-          },
           "outputSelection": {
             "*": {
-              "": [
-                "ast"
-              ],
               "*": [
                 "abi",
                 "evm.bytecode",
                 "evm.deployedBytecode",
-                "evm.methodIdentifiers"
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
               ]
             }
-          },
-          "evmVersion": "london"
+          }
         }
       },
-      "imports": [],
-      "versionRequirement": ">=0.8.0",
-      "artifacts": {
-        "ERC20": {
-          "0.8.10+commit.fc410830.Darwin.appleclang": "ERC20.sol/ERC20.json"
-        }
-      }
+      "imports": [
+        "@openzeppelin/contracts-upgradeable/token/ERC721/IERC721Upgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/token/ERC721/IERC721ReceiverUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/token/ERC721/extensions/IERC721MetadataUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/utils/StringsUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/utils/introspection/ERC165Upgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.4"
+      ],
+      "artifacts": [
+        "ERC721AUpgradeable"
+      ]
     },
-    "/Users/nuhhtyy/Desktop/Projects/rap/src/tokens/ERC721.sol": {
-      "lastModificationDate": 1651117272244,
-      "contentHash": "3a1b1fdfde0b3af1717caa925f69a588",
-      "sourceName": "src/tokens/ERC721.sol",
+    "/Users/tobiasgu/dev/Crypto/rappearsDAO/newNft/node_modules/@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol": {
+      "lastModificationDate": 1651441146395,
+      "contentHash": "49c8ad51a559f6dda13d35874f7dfdb9",
+      "sourceName": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
       "solcConfig": {
+        "version": "0.8.4",
         "settings": {
           "optimizer": {
             "enabled": true,
             "runs": 200
           },
-          "metadata": {
-            "bytecodeHash": "none"
-          },
           "outputSelection": {
             "*": {
-              "": [
-                "ast"
-              ],
               "*": [
                 "abi",
                 "evm.bytecode",
                 "evm.deployedBytecode",
-                "evm.methodIdentifiers"
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
               ]
             }
-          },
-          "evmVersion": "london"
+          }
         }
       },
-      "imports": [],
-      "versionRequirement": ">=0.8.0",
-      "artifacts": {
-        "ERC721": {
-          "0.8.10+commit.fc410830.Darwin.appleclang": "ERC721.sol/ERC721.json"
-        },
-        "ERC721TokenReceiver": {
-          "0.8.10+commit.fc410830.Darwin.appleclang": "ERC721.sol/ERC721TokenReceiver.json"
-        }
-      }
+      "imports": [
+        "../../utils/AddressUpgradeable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Initializable"
+      ]
     },
-    "/Users/nuhhtyy/Desktop/Projects/rap/src/utils/owner.sol": {
-      "lastModificationDate": 1651117272242,
-      "contentHash": "493a4217008b3dd13a921ee22800bec6",
-      "sourceName": "src/utils/owner.sol",
+    "/Users/tobiasgu/dev/Crypto/rappearsDAO/newNft/node_modules/@openzeppelin/contracts-upgradeable/token/ERC721/IERC721Upgradeable.sol": {
+      "lastModificationDate": 1651441146392,
+      "contentHash": "3bea986b69e509a8d978ab2502a8bf2e",
+      "sourceName": "@openzeppelin/contracts-upgradeable/token/ERC721/IERC721Upgradeable.sol",
       "solcConfig": {
+        "version": "0.8.4",
         "settings": {
           "optimizer": {
             "enabled": true,
             "runs": 200
           },
-          "metadata": {
-            "bytecodeHash": "none"
-          },
           "outputSelection": {
             "*": {
-              "": [
-                "ast"
-              ],
               "*": [
                 "abi",
                 "evm.bytecode",
                 "evm.deployedBytecode",
-                "evm.methodIdentifiers"
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
               ]
             }
+          }
+        }
+      },
+      "imports": [
+        "../../utils/introspection/IERC165Upgradeable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC721Upgradeable"
+      ]
+    },
+    "/Users/tobiasgu/dev/Crypto/rappearsDAO/newNft/node_modules/@openzeppelin/contracts-upgradeable/token/ERC721/IERC721ReceiverUpgradeable.sol": {
+      "lastModificationDate": 1651441146392,
+      "contentHash": "60093f8f135a0646b7193788efa26af3",
+      "sourceName": "@openzeppelin/contracts-upgradeable/token/ERC721/IERC721ReceiverUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
           },
-          "evmVersion": "london"
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
         }
       },
       "imports": [],
-      "versionRequirement": ">=0.8.0",
-      "artifacts": {
-        "Owner": {
-          "0.8.10+commit.fc410830.Darwin.appleclang": "owner.sol/Owner.json"
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC721ReceiverUpgradeable"
+      ]
+    },
+    "/Users/tobiasgu/dev/Crypto/rappearsDAO/newNft/node_modules/@openzeppelin/contracts-upgradeable/token/ERC721/extensions/IERC721MetadataUpgradeable.sol": {
+      "lastModificationDate": 1651441146391,
+      "contentHash": "76212ca0265501d1eb3dd1175e6afca4",
+      "sourceName": "@openzeppelin/contracts-upgradeable/token/ERC721/extensions/IERC721MetadataUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
         }
-      }
+      },
+      "imports": [
+        "../IERC721Upgradeable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC721MetadataUpgradeable"
+      ]
+    },
+    "/Users/tobiasgu/dev/Crypto/rappearsDAO/newNft/node_modules/@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol": {
+      "lastModificationDate": 1651441146372,
+      "contentHash": "b70d2e0552ab1f44f7e44b5f8379c358",
+      "sourceName": "@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.1"
+      ],
+      "artifacts": [
+        "AddressUpgradeable"
+      ]
+    },
+    "/Users/tobiasgu/dev/Crypto/rappearsDAO/newNft/node_modules/@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol": {
+      "lastModificationDate": 1651441146373,
+      "contentHash": "6200b84950eb05b4a92a39fd1d6e0f9b",
+      "sourceName": "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../proxy/utils/Initializable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ContextUpgradeable"
+      ]
+    },
+    "/Users/tobiasgu/dev/Crypto/rappearsDAO/newNft/node_modules/@openzeppelin/contracts-upgradeable/utils/introspection/ERC165Upgradeable.sol": {
+      "lastModificationDate": 1651441146377,
+      "contentHash": "5f2d8b81c0ff5bd2047b4846c20b998d",
+      "sourceName": "@openzeppelin/contracts-upgradeable/utils/introspection/ERC165Upgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC165Upgradeable.sol",
+        "../../proxy/utils/Initializable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ERC165Upgradeable"
+      ]
+    },
+    "/Users/tobiasgu/dev/Crypto/rappearsDAO/newNft/node_modules/@openzeppelin/contracts-upgradeable/utils/introspection/IERC165Upgradeable.sol": {
+      "lastModificationDate": 1651441146389,
+      "contentHash": "d6ecf203a5e72c845be9bbf2f304a289",
+      "sourceName": "@openzeppelin/contracts-upgradeable/utils/introspection/IERC165Upgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC165Upgradeable"
+      ]
+    },
+    "/Users/tobiasgu/dev/Crypto/rappearsDAO/newNft/contracts/RewardPool.sol": {
+      "lastModificationDate": 1651533486265,
+      "contentHash": "e517f22e6296ca79e8fdeb61c75cc9b1",
+      "sourceName": "contracts/RewardPool.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "erc721a-upgradeable/contracts/extensions/ERC721AQueryableUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
+        "hardhat/console.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.4"
+      ],
+      "artifacts": [
+        "HighstackRewardPool"
+      ]
     }
   }
 }
