@@ -7,6 +7,8 @@ coverage.json
 typechain
 *.DS_STORE
 *.env
+signed_whitelists
+snapshotJson
 
 #Hardhat files
 cache
