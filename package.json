@@ -1,5 +1,5 @@
 {
-  "name": "shiboost-eth-bsc-bridge",
+  "name": "rappears-contracts",
   "license": "",
   "scripts": {
     "test": "npx hardhat test",
