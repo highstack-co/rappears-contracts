@@ -12,10 +12,7 @@ import "hardhat/console.sol";
  * @notice This is a contract instance that allows users to register NFTs to collect rewards.
  */
 
-contract HighstackRewardPool is
-    OwnableUpgradeable,
-    ReentrancyGuardUpgradeable
-{
+contract HighstackRewardPool is OwnableUpgradeable, ReentrancyGuardUpgradeable {
     address private constant _burner =
         0x000000000000000000000000000000000000dEaD;
 
@@ -33,7 +30,7 @@ contract HighstackRewardPool is
     // mapping of ids => reward debt
     mapping(uint256 => uint256) public rewardDebt;
     mapping(uint256 => bool) public isRegistered;
-    mapping(uint256 => uint8) public tierById;
+    mapping(uint256 => uint256) public tierById;
 
     event Deposit(address indexed user, uint256 amount);
     event Withdraw(address indexed user, uint256 amount);
@@ -64,6 +61,7 @@ contract HighstackRewardPool is
         external
         onlyOwner
     {
+        // default is 100;
         for (uint256 _i = 0; _i < _tokenIds.length; _i++) {
             tierById[_tokenIds[_i]] = weighting;
         }
@@ -98,8 +96,15 @@ contract HighstackRewardPool is
             );
             if (!isRegistered[tokenID]) {
                 isRegistered[tokenID] = true;
-                rewardDebt[tokenID] = pool.accERC20PerShare / (1e36);
-                pool.totalTokensRegistered += 1;
+                uint256 tier = (
+                    tierById[tokenID] == 0
+                        ? uint256(100)
+                        : uint256(tierById[tokenID])
+                );
+
+                rewardDebt[tokenID] = (pool.accERC20PerShare * tier) / (1e36);
+
+                pool.totalTokensRegistered += tier;
                 tokensToRegister++;
             }
         }
@@ -111,7 +116,8 @@ contract HighstackRewardPool is
             return 0;
         }
         uint256 _accERC20PerShare = pool.accERC20PerShare;
-        return _accERC20PerShare / (1e36) - rewardDebt[nftId];
+        uint256 tier = tierById[nftId] == 0 ? uint256(100) : tierById[nftId];
+        return (_accERC20PerShare * tier) / (1e36) - rewardDebt[nftId];
     }
 
     function calcHarvestTotForUser(address userAddress)
@@ -146,7 +152,7 @@ contract HighstackRewardPool is
         );
         rewardDebt[id] += amount;
         (bool success, ) = address(msg.sender).call{value: amount}("");
-        if (success){
+        if (success) {
             pool.curRewardsSupply = address(this).balance;
             pool.paidOutRewards = pool.paidOutRewards + (amount);
         }

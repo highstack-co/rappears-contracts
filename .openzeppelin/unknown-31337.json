@@ -17,27 +17,27 @@
     },
     {
       "address": "0x5FC8d32690cc91D4c39d9d3abcBD16989F875707",
-      "txHash": "0x6a64cb8f51068842673d83eb022c5d0735d378e75f8b70873f6a7c1a6aca378d",
+      "txHash": "0x9f346db2b2388a9013ac1a2515d8cbe53dce345b805d42b917cee494544dc36b",
       "kind": "transparent"
     },
     {
       "address": "0x0165878A594ca255338adfa4d48449f69242Eb8F",
-      "txHash": "0x461d7f42b10da84c2853072f7fa358c5bf8e4d71b1b2dd8fd51f6a16e361f912",
+      "txHash": "0x8c3c24091b2252c775e55526970376c843542ebb21dbb81819ccc08ae76a600b",
       "kind": "transparent"
     },
     {
       "address": "0x2279B7A0a67DB372996a5FaB50D91eAA73d2eBe6",
-      "txHash": "0x659c2ee5d89778b937aaa42d51cdf3b3b7d9689f041f1d4334729303c122265d",
+      "txHash": "0x0e2e70935b90e50c13fc193e6b52a8bcc5765d652d80cb5a2ee164a2b4135241",
       "kind": "transparent"
     },
     {
       "address": "0x610178dA211FEF7D417bC0e6FeD39F05609AD788",
-      "txHash": "0xb3ede3ceb6fbc259b0cd64c2a1d92ae281f3d4befa091351ec925aa4bff795ab",
+      "txHash": "0x87f3fcd1102932727409f11561a37bd516a23e343a3a6b7d90fbead0f6436e42",
       "kind": "transparent"
     },
     {
       "address": "0xA51c1fc2f0D1a1b8494Ed1FE312d7C3a78Ed91C0",
-      "txHash": "0x760926e780c2b4f23d0394a752aa31e7c9420342d99c7cacf00f5e01a37e5ec6",
+      "txHash": "0x3234c5179c7fe556a5d677b1055b2cc4f30034788a3790cef15bc78afcc6a75a",
       "kind": "transparent"
     }
   ],
@@ -115,7 +115,7 @@
             "label": "_ownerships",
             "offset": 0,
             "slot": "105",
-            "type": "t_mapping(t_uint256,t_struct(TokenOwnership)1978_storage)",
+            "type": "t_mapping(t_uint256,t_struct(TokenOwnership)2037_storage)",
             "contract": "ERC721AUpgradeable",
             "src": "erc721a-upgradeable/contracts/ERC721AUpgradeable.sol:81"
           },
@@ -123,7 +123,7 @@
             "label": "_addressData",
             "offset": 0,
             "slot": "106",
-            "type": "t_mapping(t_address,t_struct(AddressData)1987_storage)",
+            "type": "t_mapping(t_address,t_struct(AddressData)2046_storage)",
             "contract": "ERC721AUpgradeable",
             "src": "erc721a-upgradeable/contracts/ERC721AUpgradeable.sol:84"
           },
@@ -309,7 +309,7 @@
             "label": "mapping(address => mapping(address => bool))",
             "numberOfBytes": "32"
           },
-          "t_mapping(t_address,t_struct(AddressData)1987_storage)": {
+          "t_mapping(t_address,t_struct(AddressData)2046_storage)": {
             "label": "mapping(address => struct ERC721AUpgradeable.AddressData)",
             "numberOfBytes": "32"
           },
@@ -317,7 +317,7 @@
             "label": "mapping(uint256 => address)",
             "numberOfBytes": "32"
           },
-          "t_mapping(t_uint256,t_struct(TokenOwnership)1978_storage)": {
+          "t_mapping(t_uint256,t_struct(TokenOwnership)2037_storage)": {
             "label": "mapping(uint256 => struct ERC721AUpgradeable.TokenOwnership)",
             "numberOfBytes": "32"
           },
@@ -325,7 +325,7 @@
             "label": "string",
             "numberOfBytes": "32"
           },
-          "t_struct(AddressData)1987_storage": {
+          "t_struct(AddressData)2046_storage": {
             "label": "struct ERC721AUpgradeable.AddressData",
             "members": [
               {
@@ -379,7 +379,7 @@
             ],
             "numberOfBytes": "96"
           },
-          "t_struct(TokenOwnership)1978_storage": {
+          "t_struct(TokenOwnership)2037_storage": {
             "label": "struct ERC721AUpgradeable.TokenOwnership",
             "members": [
               {
@@ -414,9 +414,9 @@
         }
       }
     },
-    "9de32441da253334212b4909a66c29438736986f7a95f9305d5b711055667140": {
+    "89c2e6ed8e6ae97e9ce8fd07cefb737913fdecc3058959f2b1e01a1fb2f146a0": {
       "address": "0xDc64a140Aa3E981100a9becA4E685f962f0cF6C9",
-      "txHash": "0xdca5e7675b9163b9aea5a630634a48f9b43f013f72a012a85eca42cdee28d74c",
+      "txHash": "0xcfa4405c62701dd0257c5bd7f1a052bb2513584dadefaeb3f89a5043014c132d",
       "layout": {
         "storage": [
           {
@@ -479,9 +479,9 @@
             "label": "erc721Address",
             "offset": 0,
             "slot": "151",
-            "type": "t_contract(ERC721AQueryableUpgradeable)3652",
+            "type": "t_contract(ERC721AQueryableUpgradeable)3711",
             "contract": "HighstackRewardPool",
-            "src": "contracts/RewardPool.sol:22"
+            "src": "contracts/RewardPool.sol:19"
           },
           {
             "label": "pool",
@@ -489,7 +489,7 @@
             "slot": "152",
             "type": "t_struct(PoolInfo)1506_storage",
             "contract": "HighstackRewardPool",
-            "src": "contracts/RewardPool.sol:23"
+            "src": "contracts/RewardPool.sol:20"
           },
           {
             "label": "rewardDebt",
@@ -497,7 +497,7 @@
             "slot": "157",
             "type": "t_mapping(t_uint256,t_uint256)",
             "contract": "HighstackRewardPool",
-            "src": "contracts/RewardPool.sol:34"
+            "src": "contracts/RewardPool.sol:31"
           },
           {
             "label": "isRegistered",
@@ -505,15 +505,15 @@
             "slot": "158",
             "type": "t_mapping(t_uint256,t_bool)",
             "contract": "HighstackRewardPool",
-            "src": "contracts/RewardPool.sol:35"
+            "src": "contracts/RewardPool.sol:32"
           },
           {
             "label": "tierById",
             "offset": 0,
             "slot": "159",
-            "type": "t_mapping(t_uint256,t_uint8)",
+            "type": "t_mapping(t_uint256,t_uint256)",
             "contract": "HighstackRewardPool",
-            "src": "contracts/RewardPool.sol:36"
+            "src": "contracts/RewardPool.sol:33"
           }
         ],
         "types": {
@@ -533,7 +533,7 @@
             "label": "bool",
             "numberOfBytes": "1"
           },
-          "t_contract(ERC721AQueryableUpgradeable)3652": {
+          "t_contract(ERC721AQueryableUpgradeable)3711": {
             "label": "contract ERC721AQueryableUpgradeable",
             "numberOfBytes": "20"
           },
@@ -543,10 +543,6 @@
           },
           "t_mapping(t_uint256,t_uint256)": {
             "label": "mapping(uint256 => uint256)",
-            "numberOfBytes": "32"
-          },
-          "t_mapping(t_uint256,t_uint8)": {
-            "label": "mapping(uint256 => uint8)",
             "numberOfBytes": "32"
           },
           "t_struct(PoolInfo)1506_storage": {
@@ -588,10 +584,6 @@
           "t_uint256": {
             "label": "uint256",
             "numberOfBytes": "32"
-          },
-          "t_uint8": {
-            "label": "uint8",
-            "numberOfBytes": "1"
           }
         }
       }

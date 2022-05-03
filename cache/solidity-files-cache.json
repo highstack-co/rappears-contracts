@@ -685,8 +685,8 @@
       ]
     },
     "/Users/tobiasgu/dev/Crypto/rappearsDAO/newNft/contracts/RewardPool.sol": {
-      "lastModificationDate": 1651533486265,
-      "contentHash": "e517f22e6296ca79e8fdeb61c75cc9b1",
+      "lastModificationDate": 1651537966814,
+      "contentHash": "7526234f08ee0b725f928a73ca473ba6",
       "sourceName": "contracts/RewardPool.sol",
       "solcConfig": {
         "version": "0.8.4",

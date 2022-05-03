@@ -101,6 +101,7 @@ contract("RewardPool", () => {
       Number(await rewardPool.calcHarvestTotForUser(alice.address)),
       Number(ethers.utils.parseEther("10")),
     );
+
     assert.equal(
       Number(await rewardPool.calcHarvestTotForUser(bob.address)),
       Number(ethers.utils.parseEther("0")),
